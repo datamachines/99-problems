@@ -1,0 +1,13 @@
+# Q: What are some other versions we could use?
+version: '2'
+
+services:
+  hello:
+    # Q: Do you need to define the image?
+    image: # add image name
+    # Q: Do you need to define a build context?
+    build:
+      context: # add path to build root
+      dockerfile: # add name of your dockerfile
+    ports:
+      - # add port mapping for the service
