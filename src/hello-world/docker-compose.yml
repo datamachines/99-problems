@@ -1,5 +1,5 @@
 # Q: What are some other versions we could use?
-version: '2'
+version: '3.4'
 
 services:
   hello:
@@ -9,5 +9,6 @@ services:
     build:
       context: # add path to build root
       dockerfile: # add name of your dockerfile
+      network: host
     ports:
       - # add port mapping for the service

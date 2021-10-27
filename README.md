@@ -16,7 +16,8 @@ The goal is to work through containerizing and running an application using Dock
 - Write a Dockerfile for a simple application contained in the `src/hello-world` folder of this repo.
   -- The service runs on port 5000
   -- It should extend the official `python:3` image
-- Build the image from the dockerfile as `hello:dev`
+- Build the image from the dockerfile as `hello:dev`. 
+  > Note that this may require using the host network as a build command parameter.
 - Run the docker image and verify you can connect to it on port 5000 by curling `http://localhost:5000/Boss`.
 - Stop and remove the container
 - Retag and push the image to the local docker registry at `localhost:32000/python:3`
@@ -31,7 +32,7 @@ The goal is to work through containerizing and running an application using Dock
 - List the nodes in the cluster
 - Find out what storage is available in the cluster
 - Create a new namespace `hello`
-- Launch your hello-world app into the cluster using the kubernetes manifest in `dist/k8s/hello-world`  
+- Launch your hello-world app into the cluster using the kubernetes manifest in `dist/k8s/hello-world-deployment.yml`  
 - What port is the app available on?
 - Verify the deployment is visible from the local host by curling `http://localhost:<port>/Boss`
 - Exec into the deployment pod and find the current username
